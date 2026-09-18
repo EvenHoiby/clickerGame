@@ -9,7 +9,7 @@ let dollarAmount = Number(counter.innerText);
 
 //Main button
 button.addEventListener('click', () => {
-    dollarAmount = dollarAmount + 10;
+    dollarAmount = dollarAmount + 1;
     counter.innerText = dollarAmount;
 });
 
@@ -39,7 +39,7 @@ upg1.addEventListener('click', () => {
 
 setInterval(() => {
     if (hasUpg1) {
-        dollarAmount = dollarAmount + 10;
+        dollarAmount = dollarAmount + 5;
         counter.innerText = dollarAmount
     }
 }, 1000)
@@ -65,7 +65,7 @@ upg2.addEventListener('click', () => {
 
 setInterval(() => {
     if (hasUpg2) {
-        dollarAmount = dollarAmount + 50;
+        dollarAmount = dollarAmount + 25;
         counter.innerText = dollarAmount
     }
 }, 1000)
@@ -91,7 +91,7 @@ upg3.addEventListener('click', () => {
 
 setInterval(() => {
     if (hasUpg3) {
-        dollarAmount = dollarAmount + 100;
+        dollarAmount = dollarAmount + 50;
         counter.innerText = dollarAmount
     }
 }, 1000)
@@ -117,7 +117,7 @@ upg4.addEventListener('click', () => {
 
 setInterval(() => {
     if (hasUpg4) {
-        dollarAmount = dollarAmount + 500;
+        dollarAmount = dollarAmount + 100;
         counter.innerText = dollarAmount
     }
 }, 1000)
