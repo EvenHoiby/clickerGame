@@ -4,6 +4,7 @@ let hasUpg1 = false;
 let hasUpg2 = false;
 let hasUpg3 = false;
 let hasUpg4 = false;
+let hasWon = false;
 
 let dollarAmount = Number(counter.innerText);
 
@@ -121,3 +122,11 @@ setInterval(() => {
         counter.innerText = dollarAmount
     }
 }, 1000)
+
+//Win condition
+setInterval(() => {
+    if(hasUpg4 === true && hasWon === false) {
+        alert('You did it! You are rich!')
+        hasWon = true;
+    }
+}, 100)
