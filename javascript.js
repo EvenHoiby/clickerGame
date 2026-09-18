@@ -7,8 +7,9 @@ let hasUpg4 = false;
 
 let dollarAmount = Number(counter.innerText);
 
+//Main button
 button.addEventListener('click', () => {
-    dollarAmount = dollarAmount + 1;
+    dollarAmount = dollarAmount + 10;
     counter.innerText = dollarAmount;
 });
 
@@ -17,6 +18,8 @@ const upg2 = document.getElementById('upg2');
 const upg3 = document.getElementById('upg3');
 const upg4 = document.getElementById('upg4');
 
+
+//Upgrade 1
 setInterval(() => {
     if(hasUpg1 === true) {
         upg1.innerText = 'Sold | Cost: 50'
@@ -36,12 +39,13 @@ upg1.addEventListener('click', () => {
 
 setInterval(() => {
     if (hasUpg1) {
-        dollarAmount = dollarAmount + 5;
+        dollarAmount = dollarAmount + 10;
         counter.innerText = dollarAmount
     }
 }, 1000)
 
 
+//Upgrade 2
 setInterval(() => {
     if(hasUpg2 === true) {
         upg2.innerText = 'Sold | Cost: 250'
@@ -61,7 +65,59 @@ upg2.addEventListener('click', () => {
 
 setInterval(() => {
     if (hasUpg2) {
-        dollarAmount = dollarAmount + 20;
+        dollarAmount = dollarAmount + 50;
+        counter.innerText = dollarAmount
+    }
+}, 1000)
+
+
+//Upgrade 3
+setInterval(() => {
+    if(hasUpg3 === true) {
+        upg3.innerText = 'Sold | Cost: 1,000'
+    }
+    else if(hasUpg3 === false && dollarAmount >= 1000) {
+        upg3.innerText = 'Buy | Cost: 1,000'
+    }
+}, 100)
+
+upg3.addEventListener('click', () => {
+    if(dollarAmount >= 1000 && hasUpg3 === false) {
+    hasUpg3 = true;
+    dollarAmount = dollarAmount - 1000;
+    counter.innerText = dollarAmount;
+    }
+});
+
+setInterval(() => {
+    if (hasUpg3) {
+        dollarAmount = dollarAmount + 100;
+        counter.innerText = dollarAmount
+    }
+}, 1000)
+
+
+//Upgrade 4
+setInterval(() => {
+    if(hasUpg4 === true) {
+        upg4.innerText = 'Sold | Cost: 10,000'
+    }
+    else if(hasUpg4 === false && dollarAmount >= 10000) {
+        upg4.innerText = 'Buy | Cost: 10,000'
+    }
+}, 100)
+
+upg4.addEventListener('click', () => {
+    if(dollarAmount >= 10000 && hasUpg4 === false) {
+    hasUpg4 = true;
+    dollarAmount = dollarAmount - 10000;
+    counter.innerText = dollarAmount;
+    }
+});
+
+setInterval(() => {
+    if (hasUpg4) {
+        dollarAmount = dollarAmount + 500;
         counter.innerText = dollarAmount
     }
 }, 1000)
