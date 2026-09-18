@@ -71,6 +71,9 @@ article h2 {
     margin-bottom: 40px;
     margin-top: 20px;
 }
+#dollar:hover {
+    background-color: #95be7b;
+}
 .upgrades {
     margin: 10px auto;
     margin-bottom: 15px;
@@ -78,4 +81,7 @@ article h2 {
     border: 3px solid black;
     padding-top: 5px;
     padding-bottom: 5px;
+}
+.upgrades:hover {
+    background-color: #95be7b;
 }
