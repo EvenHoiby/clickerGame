@@ -1,6 +1,10 @@
 body {
     margin: 0;
-    background-color: red;
+    background-image: url(img/dollars.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 header {
