@@ -2,13 +2,13 @@
 const button = document.getElementById('dollar');
 const counter = document.getElementById('counter');
 
-//Current amount of money
-let dollarAmount = Number(counter.innerText);
+//Money counter
+let dollarAmount = 0;
 
 //Main button
 button.addEventListener('click', () => {
-    dollarAmount = dollarAmount + 1;
-    counter.innerText = dollarAmount;
+    dollarAmount = dollarAmount + 1000;
+    counter.innerText = dollarAmount + '$';
 });
 
 //Upgrade variables
@@ -33,11 +33,11 @@ function upgrade(hasUpg, buttonText, upgCost) {
 if(dollarAmount >= upgCost && hasUpg === false) {
     hasUpg = true;
     dollarAmount = dollarAmount - upgCost;
-    counter.innerText = dollarAmount;
+    counter.innerText = dollarAmount + '$';
 }
 
 if(hasUpg === true) {
-    buttonText.innerText = 'Sold | Cost: ' + upgCost;
+    buttonText.innerText = 'Owned';
 }
 
 return hasUpg;
@@ -47,28 +47,28 @@ return hasUpg;
 setInterval(() => {
     if (hasUpg1) {
         dollarAmount = dollarAmount + 5;
-        counter.innerText = dollarAmount
+        counter.innerText = dollarAmount + '$';
     }
 }, 1000)
 
 setInterval(() => {
     if (hasUpg2) {
         dollarAmount = dollarAmount + 25;
-        counter.innerText = dollarAmount
+        counter.innerText = dollarAmount + '$';
     }
 }, 1000)
 
 setInterval(() => {
     if (hasUpg3) {
         dollarAmount = dollarAmount + 50;
-        counter.innerText = dollarAmount
+        counter.innerText = dollarAmount + '$';
     }
 }, 1000)
 
 setInterval(() => {
     if (hasUpg4) {
         dollarAmount = dollarAmount + 10000;
-        counter.innerText = dollarAmount
+        counter.innerText = dollarAmount + '$';
     }
 }, 1000)
 
