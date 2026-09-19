@@ -13,7 +13,7 @@ const jobUpgradeImg = document.getElementById('jobUpgradeImg');
 const jobImg = document.getElementById('jobImg');
 const currentJob = document.getElementById('currentJob');
 const currentClickNum = document.getElementById('currentClickNum');
-let jobPay = 1;
+let jobPay = 10000;
 let jobPrice = 20;
 
 job.addEventListener('click', () => {
@@ -65,11 +65,11 @@ const upg4Cost = 10000;
 
 const upg5 = document.getElementById('upg5');
 let hasUpg5 = false;
-const upg5Cost = 10000;
+const upg5Cost = 50000;
 
 const upg6 = document.getElementById('upg6');
 let hasUpg6 = false;
-const upg6Cost = 10000;
+const upg6Cost = 250000;
 
 //Function for the upgrade buttons
 function upgrade(hasUpg, buttonText, upgCost) {
