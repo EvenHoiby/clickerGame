@@ -27,11 +27,11 @@ function clickDoubler(price) {
         dollarAmount = dollarAmount - price;
         counter.innerText = dollarAmount + '$';
         job.innerText = 'New Job | Cost: ' + jobPrice + '$';
-        jobTitle.innerText = 'Another Job';
-        jobUpgradeImg.src = '';
+        jobTitle.innerText = 'Construction';
+        jobUpgradeImg.src = 'img/constructionWorker.jpg';
         currentClickNum.innerText = jobPay + '$/Click';
         jobEarnings.innerText = jobPay * 2 + '$/Click';
-        currentJob.innerText = 'Fast Food Worker';
+        currentJob.innerText = 'Fast Food';
         jobImg.src = 'img/fastFoodWorker.jpg';
     }
 }
