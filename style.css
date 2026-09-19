@@ -27,8 +27,8 @@ header {
 #middle {
     background-color: #DDE8D5;
     margin: 0 auto;
-    padding-top: 100px;
-    padding-bottom: 300px;
+    padding-top: 1px;
+    padding-bottom: 1px;
     max-width: 900px;
     display: block;
     text-align: center;
@@ -39,6 +39,7 @@ main article {
     background-color: gray;
     display: block;
     margin: 25px auto;
+    margin-bottom: 26px;
     max-width: 400px;
     border: 3px solid black;
     border-radius: 4px;
