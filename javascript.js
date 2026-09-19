@@ -1,15 +1,48 @@
-//Main button variables
+//Button variables
 const button = document.getElementById('dollar');
 const counter = document.getElementById('counter');
+const job = document.getElementById('job');
 
 //Money counter
 let dollarAmount = 0;
 
+//Job upgrade
+const jobTitle = document.getElementById('jobTitle');
+const jobEarnings = document.getElementById('jobEarnings');
+const jobUpgradeImg = document.getElementById('jobUpgradeImg');
+const jobImg = document.getElementById('jobImg');
+const currentJob = document.getElementById('currentJob');
+const currentClickNum = document.getElementById('currentClickNum');
+let jobPay = 1;
+let jobPrice = 20;
+
+job.addEventListener('click', () => {
+    clickDoubler(jobPrice);
+})
+
+function clickDoubler(price) {
+    if(dollarAmount >= price) {
+        jobPay = jobPay * 2;
+        jobPrice = jobPrice * 10;
+        dollarAmount = dollarAmount - price;
+        counter.innerText = dollarAmount + '$';
+        job.innerText = 'New Job | Cost: ' + jobPrice + '$';
+        jobTitle.innerText = 'Another Job';
+        jobUpgradeImg.src = '';
+        currentClickNum.innerText = jobPay + '$/Click';
+        jobEarnings.innerText = jobPay * 2 + '$/Click';
+    }
+}
+
 //Main button
 button.addEventListener('click', () => {
-    dollarAmount = dollarAmount + 1000;
-    counter.innerText = dollarAmount + '$';
+    mainButtonClick(jobPay);
 });
+
+function mainButtonClick(clickAmount) {
+    dollarAmount = dollarAmount + clickAmount;
+    counter.innerText = dollarAmount + '$';
+}
 
 //Upgrade variables
 const upg1 = document.getElementById('upg1');
