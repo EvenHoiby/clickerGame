@@ -31,6 +31,8 @@ function clickDoubler(price) {
         jobUpgradeImg.src = '';
         currentClickNum.innerText = jobPay + '$/Click';
         jobEarnings.innerText = jobPay * 2 + '$/Click';
+        currentJob.innerText = 'Fast Food Worker';
+        jobImg.src = 'img/fastFoodWorker.jpg';
     }
 }
 
@@ -60,6 +62,14 @@ const upg3Cost = 1000;
 const upg4 = document.getElementById('upg4');
 let hasUpg4 = false;
 const upg4Cost = 10000;
+
+const upg5 = document.getElementById('upg5');
+let hasUpg5 = false;
+const upg5Cost = 10000;
+
+const upg6 = document.getElementById('upg6');
+let hasUpg6 = false;
+const upg6Cost = 10000;
 
 //Function for the upgrade buttons
 function upgrade(hasUpg, buttonText, upgCost) {
@@ -100,7 +110,21 @@ setInterval(() => {
 
 setInterval(() => {
     if (hasUpg4) {
-        dollarAmount = dollarAmount + 10000;
+        dollarAmount = dollarAmount + 100;
+        counter.innerText = dollarAmount + '$';
+    }
+}, 1000)
+
+setInterval(() => {
+    if (hasUpg5) {
+        dollarAmount = dollarAmount + 500;
+        counter.innerText = dollarAmount + '$';
+    }
+}, 1000)
+
+setInterval(() => {
+    if (hasUpg6) {
+        dollarAmount = dollarAmount + 2500;
         counter.innerText = dollarAmount + '$';
     }
 }, 1000)
@@ -114,11 +138,15 @@ upg3.addEventListener('click', () => {hasUpg3 = upgrade(hasUpg3, upg3, upg3Cost)
 
 upg4.addEventListener('click', () => {hasUpg4 = upgrade(hasUpg4, upg4, upg4Cost)});
 
+upg5.addEventListener('click', () => {hasUpg5 = upgrade(hasUpg5, upg5, upg5Cost)});
+
+upg6.addEventListener('click', () => {hasUpg6 = upgrade(hasUpg6, upg6, upg6Cost)});
+
 
 //Win condition
 let hasWon = false;
 setInterval(() => {
-    if(hasUpg4 && !hasWon) {
+    if(hasUpg6 && !hasWon) {
         alert('You did it! You are rich!')
         hasWon = true;
     }
