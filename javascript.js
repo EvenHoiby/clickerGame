@@ -14,7 +14,7 @@ const jobImg = document.getElementById('jobImg');
 const currentJob = document.getElementById('currentJob');
 const currentClickNum = document.getElementById('currentClickNum');
 let jobPay = 1;
-let jobPrice = 20;
+let jobPrice = 50;
 
 job.addEventListener('click', () => {
     clickDoubler(jobPrice);
@@ -22,7 +22,7 @@ job.addEventListener('click', () => {
 
 function clickDoubler(price) {
     if(dollarAmount >= price) {
-        jobPay = jobPay * 2;
+        jobPay = jobPay * 3;
         jobPrice = jobPrice * 10;
         dollarAmount = dollarAmount - price;
         counter.innerText = dollarAmount + '$';
@@ -30,7 +30,7 @@ function clickDoubler(price) {
         jobTitle.innerText = 'Construction';
         jobUpgradeImg.src = 'img/constructionWorker.jpg';
         currentClickNum.innerText = jobPay + '$/Click';
-        jobEarnings.innerText = jobPay * 2 + '$/Click';
+        jobEarnings.innerText = jobPay * 3 + '$/Click';
         currentJob.innerText = 'Fast Food';
         jobImg.src = 'img/fastFoodWorker.jpg';
     }
@@ -150,4 +150,4 @@ setInterval(() => {
         alert('You did it! You are rich!')
         hasWon = true;
     }
-}, 100)
+}, 500)
