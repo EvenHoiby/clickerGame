@@ -7,7 +7,7 @@ let dollarAmount = Number(counter.innerText);
 
 //Main button
 button.addEventListener('click', () => {
-    dollarAmount = dollarAmount + 1000;
+    dollarAmount = dollarAmount + 1;
     counter.innerText = dollarAmount;
 });
 
