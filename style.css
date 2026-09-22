@@ -25,33 +25,38 @@ header {
 }
 
 #middle {
-    background-color: #DDE8D5;
     margin: 0 auto;
     padding-top: 1px;
     padding-bottom: 1px;
-    max-width: 900px;
-    display: block;
-    text-align: center;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
+    display: flex;
+    justify-content: space-around;
 }
 main article {
     background-color: gray;
-    display: block;
-    margin: 25px auto;
-    margin-bottom: 26px;
-    max-width: 400px;
     border: 3px solid black;
     border-radius: 4px;
+    max-width: 425px;
+    max-height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-top: 40px;
 }
 #counter {
     background-color: #dedcd8;
     font-size: 30px;
     border: 3px solid black;
     border-radius: 4px;
-    margin: 0 auto;
-    margin-bottom: 10px;
+    max-width: 200px;
+    width: 100%;
+    margin-top: 10px;
     max-width: 250px;
+    display: flex;
+    justify-content: center;
 }
 article h2 {
     margin: 0;
@@ -80,22 +85,27 @@ article h2 {
     margin: 10px;
 }
 #upgradeContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 .upgradeCard {
     background-color: #9dbc89;
     border: 3px solid black;
     border-radius: 4px;
-    margin: 0 auto;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 div img {
     width: 140px;
     box-sizing: border-box;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    margin: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     border: 3px solid black;
     border-radius: 4px;
 }
@@ -111,6 +121,8 @@ div img {
     border-top-right-radius: 4px;
     Width: 140px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
 }
 .upgradeEffect , #jobEarnings{
     border-bottom: 3px solid black;
@@ -121,10 +133,11 @@ div img {
     padding-bottom: 2px;
     Width: 140px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
 }
 #currentClickNum {
     margin: 10px auto;
-    margin-bottom: 15px;
     background-color: #DDE8D5;
     border: 3px solid black;
     border-radius: 4px;
@@ -135,7 +148,6 @@ div img {
 }
 .upgrades {
     margin: 10px auto;
-    margin-bottom: 15px;
     background-color: #85BB65;
     border: 3px solid black;
     border-radius: 4px;
