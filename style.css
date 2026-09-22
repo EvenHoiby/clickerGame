@@ -52,6 +52,7 @@ main article {
 #scrollUpgrades {
     max-height: 550px;
     overflow-y: auto;
+    scrollbar-color: #333333 gray;
     border-top: 3px solid black;
     border-bottom: 3px solid black;
     padding-top: 10px;
