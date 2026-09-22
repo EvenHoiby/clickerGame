@@ -29,7 +29,9 @@ header {
     padding-top: 1px;
     padding-bottom: 1px;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
 }
 main article {
     background-color: gray;
