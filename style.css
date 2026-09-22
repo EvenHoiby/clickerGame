@@ -48,6 +48,14 @@ main article {
     padding-bottom: 20px;
     margin-top: 40px;
 }
+#scrollUpgrades {
+    max-height: 550px;
+    overflow-y: auto;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 #counter {
     background-color: #dedcd8;
     font-size: 30px;
@@ -78,15 +86,15 @@ article h2 {
 #dollar:hover {
     background-color: #95be7b;
 }
-#upgradeArticle {
+.upgradeArticle {
     display: flex;
     flex-direction: column;
 }
-#wealthTitle {
+.wealthTitle {
     padding-top: 10px;
     margin: 10px;
 }
-#upgradeContainer {
+.upgradeContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
