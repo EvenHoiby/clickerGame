@@ -47,6 +47,7 @@ main article {
     align-items: center;
     padding-bottom: 20px;
     margin-top: 40px;
+    margin-bottom: 40px;
 }
 #scrollUpgrades {
     max-height: 550px;
@@ -168,4 +169,22 @@ div img {
 }
 .upgrades:hover {
     background-color: #95be7b;
+}
+
+footer {
+    background-color: #85BB65;
+    border-top: 3px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+footer p {
+    color: #1d1d1d;
+    background-color: #DDE8D5;
+    border: 3px solid black;
+    border-radius: 8px;
+    width: fit-content;
+    padding: 5px 10px;
 }
