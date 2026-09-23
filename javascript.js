@@ -14,26 +14,83 @@ const jobUpgradeImg = document.getElementById('jobUpgradeImg');
 const jobImg = document.getElementById('jobImg');
 const currentJob = document.getElementById('currentJob');
 const currentClickNum = document.getElementById('currentClickNum');
-let jobPay = 1;
 let jobPrice = 50;
+let jobPay = 1;
+
+// Array with all jobs
+let currentJobIndex = 0;
+const jobs = [
+    {
+        name: 'Begger',
+        img: 'img/begger.jpg',
+        pay: 1
+    },
+    {
+        name: 'Fast Food',
+        img: 'img/fastFoodWorker.jpg',
+        pay: 5
+    },
+    {
+        name: 'Construction',
+        img: 'img/constructionWorker.jpg',
+        pay: 25
+    },
+    {
+        name: 'Office Worker',
+        img: 'img/officeWorker.jpg',
+        pay: 125
+    },
+    {
+        name: 'Manager',
+        img: 'img/manager.jpg',
+        pay: 625
+    },
+    {
+        name: 'CEO',
+        img: 'img/CEO.jpg',
+        pay: 3125,
+        lastImg: 'img/thumbsUp.jpg'
+    }
+];
 
 job.addEventListener('click', () => {
     clickDoubler(jobPrice);
 })
 
 function clickDoubler(price) {
+    if(currentJobIndex >= jobs.length - 1) {
+        return;
+    }
+
     if(dollarAmount >= price) {
-        jobPay = jobPay * 3;
-        jobPrice = jobPrice * 10;
         dollarAmount = dollarAmount - price;
+        currentJobIndex++
+
+        const current = jobs[currentJobIndex]
+        const next = jobs[currentJobIndex + 1]
+
+        jobPay = current.pay;
+        jobPrice = jobPrice * 10;
+
         counter.innerText = dollarAmount + '$';
         job.innerText = 'Cost: ' + jobPrice + '$';
-        jobTitle.innerText = 'Construction';
-        jobUpgradeImg.src = 'img/constructionWorker.jpg';
-        currentClickNum.innerText = jobPay + '$/Click';
-        newJobClickNum.innerText = jobPay * 3 + '$/Click';
-        currentJob.innerText = 'Fast Food';
-        jobImg.src = 'img/fastFoodWorker.jpg';
+
+        currentJob.innerText = current.name;
+        jobImg.src = current.img;
+
+        if(next) {
+            jobTitle.innerText = next.name;
+            jobUpgradeImg.src = next.img;
+            newJobClickNum.innerText = next.pay + '$/Click';
+        }
+        else {
+            jobTitle.innerText = 'MAX JOB';
+            jobUpgradeImg.src = current.lastImg;
+            newJobClickNum.innerText = 'MAX';
+            job.innerText = 'MAX JOB';
+        }
+
+        currentClickNum.innerText = current.pay + '$/Click';
     }
 }
 
