@@ -9,12 +9,12 @@ let upgradeAmount = 0;
 
 //Job upgrade
 const jobTitle = document.getElementById('jobTitle');
-const jobEarnings = document.getElementById('jobEarnings');
+const newJobClickNum = document.getElementById('newJobClickNum');
 const jobUpgradeImg = document.getElementById('jobUpgradeImg');
 const jobImg = document.getElementById('jobImg');
 const currentJob = document.getElementById('currentJob');
 const currentClickNum = document.getElementById('currentClickNum');
-let jobPay = 1;
+let jobPay = 50;
 let jobPrice = 50;
 
 job.addEventListener('click', () => {
@@ -27,11 +27,11 @@ function clickDoubler(price) {
         jobPrice = jobPrice * 10;
         dollarAmount = dollarAmount - price;
         counter.innerText = dollarAmount + '$';
-        job.innerText = 'New Job | Cost: ' + jobPrice + '$';
+        job.innerText = 'Cost: ' + jobPrice + '$';
         jobTitle.innerText = 'Construction';
         jobUpgradeImg.src = 'img/constructionWorker.jpg';
         currentClickNum.innerText = jobPay + '$/Click';
-        jobEarnings.innerText = jobPay * 3 + '$/Click';
+        newJobClickNum.innerText = jobPay * 3 + '$/Click';
         currentJob.innerText = 'Fast Food';
         jobImg.src = 'img/fastFoodWorker.jpg';
     }
