@@ -57,6 +57,7 @@ job.addEventListener('click', () => {
     clickDoubler(jobPrice);
 })
 
+// Job button
 function clickDoubler(price) {
     if(currentJobIndex >= jobs.length - 1) {
         return;
@@ -135,6 +136,16 @@ let hasUpg6 = false;
 let upg6Inc = 2500;
 const upg6Cost = 250000;
 
+const upg7 = document.getElementById('upg7');
+let hasUpg7 = false;
+let upg7Inc = 12500;
+const upg7Cost = 1250000;
+
+const upg8 = document.getElementById('upg8');
+let hasUpg8 = false;
+let upg8Inc = 62500;
+const upg8Cost = 6250000;
+
 //Function for the upgrade buttons
 function upgrade(hasUpg, buttonText, upgCost, upgInc) {
 if(dollarAmount >= upgCost && !hasUpg) {
@@ -169,12 +180,16 @@ upg5.addEventListener('click', () => {hasUpg5 = upgrade(hasUpg5, upg5, upg5Cost,
 
 upg6.addEventListener('click', () => {hasUpg6 = upgrade(hasUpg6, upg6, upg6Cost, upg6Inc)});
 
+upg7.addEventListener('click', () => {hasUpg7 = upgrade(hasUpg7, upg7, upg7Cost, upg7Inc)});
+
+upg8.addEventListener('click', () => {hasUpg8 = upgrade(hasUpg8, upg8, upg8Cost, upg8Inc)});
+
 
 //Win condition
 let hasWon = false;
 setInterval(() => {
-    if(hasUpg6 && !hasWon) {
-        alert('You did it! You are rich!')
+    if(hasUpg8 && !hasWon) {
+        alert('You Win!')
         hasWon = true;
     }
 }, 1000)
