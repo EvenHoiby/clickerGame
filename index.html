@@ -8,30 +8,34 @@
 </head>
 <body>
     <header>
-        <h1 id="title">WealthClicker</h1>
+        <h1 id="title">Money Clicker</h1>
     </header>
     <main>
         <middle id="middle">
-            <article class="upgradeArticle">
+            <article class="upgradeArticle" id="currentJobArticle">
                 <h2 class="wealthTitle">Your Job</h2>
-                <div class="upgradeContainer">
-                    <div class="upgradeCard">
+                <div id="currentJobContainer">
+                    <div class="upgradeContainer">
+                        <div class="upgradeCard">
+                            <img src="img/fastFoodWorker.jpg" id="jobUpgradeImg">
+                            <p class="upgradeTitle">Next Job:</p>
+                            <p class="upgradeEffect" id="jobTitle">Fast Food</p>
+                            <button id="newJobClickNum">3$/Click</button>
+                            <button class="upgrades" id="job">Cost: 50$</button>
+                        </div>
+                        <div class="upgradeCard">
                             <img src="img/begger.jpg" id="jobImg">
                             <p class="upgradeTitle">Current Job:</p>
                             <p class="upgradeEffect" id="currentJob">Begger</p>
                             <button id="currentClickNum">1$/Click</button>
+                            <button class="upgradesInvis">Job</button>
                         </div>
-                    <div class="upgradeCard">
-                        <img src="img/fastFoodWorker.jpg" id="jobUpgradeImg">
-                        <p id="jobTitle">Fast Food</p>
-                        <p id="jobEarnings">3$/Click</p>
-                        <button class="upgrades" id="job">New Job | Cost: 50$</button>
                     </div>
                 </div>
             </article>
 
-            <article>
-                <h2 class="wealthTitle">Your wealth:</h2>
+            <article id="mainArticle">
+                <h2 class="wealthTitle" id="wealthTitleMain">Your wealth:</h2>
                 <p id="counter">0$</p>
                 <button id="dollar"><strong>$</strong></button>
             </article>
