@@ -14,7 +14,7 @@ const jobUpgradeImg = document.getElementById('jobUpgradeImg');
 const jobImg = document.getElementById('jobImg');
 const currentJob = document.getElementById('currentJob');
 const currentClickNum = document.getElementById('currentClickNum');
-let jobPay = 50;
+let jobPay = 1;
 let jobPrice = 50;
 
 job.addEventListener('click', () => {
