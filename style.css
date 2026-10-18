@@ -11,17 +11,16 @@ body {
 }
 
 header {
-    background-color: #85BB65;
-    border-bottom: 3px solid black;
+    background-color: #1d1c1c;
     padding: 10px;
     text-align: center;
+    box-shadow: 0px 3px 10px black;
 }
 #title {
     margin: 0 auto;
     padding: 10px;
     color: #1d1d1d;
-    background-color: #dedcd8;
-    border: 3px solid black;
+    background-color: #f1efe9;
     border-radius: 100px;
     display: inline-block;
     font-size: 38px;
@@ -37,12 +36,8 @@ header {
     gap: 30px;
     align-items: flex-start;
 }
-#mainArticle {
-    margin-top: 125px;
-}
 main article {
-    background-color: gray;
-    border: 3px solid black;
+    background-color: #393636;
     border-radius: 4px;
     max-width: 425px;
     max-height: fit-content;
@@ -59,9 +54,9 @@ main article {
 #scrollUpgrades {
     max-height: 550px;
     overflow-y: auto;
-    scrollbar-color: #333333 gray;
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
+    scrollbar-color: #393636 #1d1c1c;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
     padding-top: 10px;
     padding-bottom: 10px;
     box-sizing: border-box;
@@ -69,7 +64,6 @@ main article {
 #counter {
     background-color: #dedcd8;
     font-size: 30px;
-    border: 3px solid black;
     border-radius: 4px;
     max-width: 200px;
     width: 100%;
@@ -82,41 +76,54 @@ article h2 {
     margin: 0;
 }
 #dollar {
-    font-size: 200px;
-    background-color: #85BB65;
-    border: 3px solid black;
+    font-size: 350px;
+    background-color: rgba(0, 0, 0, 0);
+    background-color: #a3a39c;
+    border: none;
     border-radius: 100px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    padding-left: 60px;
-    padding-right: 60px;
-    margin-bottom: 40px;
-    margin-top: 20px;
+    padding: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: auto;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 #dollar:hover {
-    background-color: #95be7b;
+    transform: translateY(-2px);
+    box-shadow: 0px 10px 10px -3px black;
 }
-.upgradeArticle {
+#dollar:active {
+    transform: scale(1.05)
+}
+
+.article {
     display: flex;
     flex-direction: column;
     max-height: 660px;
+    min-height: 600px;
+    box-shadow: 0px 0px 10px 1px black;
 }
 #currentJobContainer {
     width: 100%;
     box-sizing: border-box;
     height: 550px;
     overflow-y: auto;
-    scrollbar-color: #333333 gray;
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
+    scrollbar-color: #333333 #393636;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 .wealthTitle, #wealthTitleMain {
     margin: 10px;
+    background-color: #f1efe9;
+    border-radius: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 #wealthTitleMain {
-    padding-top: 10px;
+    margin-top: 20px;
 }
 .upgradeContainer {
     display: flex;
@@ -125,8 +132,7 @@ article h2 {
     gap: 10px;
 }
 .upgradeCard {
-    background-color: #9dbc89;
-    border: 3px solid black;
+    background-color: #1d1d1d;
     border-radius: 4px;
     display: flex;
     justify-content: center;
@@ -140,17 +146,13 @@ div img {
     object-fit: cover;
     margin-bottom: 10px;
     margin-top: 10px;
-    border: 3px solid black;
     border-radius: 4px;
 }
 .upgradeTitle, .upgradeEffect {
     margin: 0 10px;
-    background-color: #DDE8D5;
+    background-color: #f1efe9;
 }
 .upgradeTitle {
-    border-top: 3px solid black;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     Width: 150px;
@@ -159,9 +161,6 @@ div img {
     justify-content: center;
 }
 .upgradeEffect , #jobEarnings{
-    border-bottom: 3px solid black;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     padding-bottom: 2px;
@@ -172,9 +171,9 @@ div img {
 }
 #currentClickNum, #newJobClickNum {
     margin: 0 auto;
+    border: none;
     margin-top: 10px;
-    background-color: #DDE8D5;
-    border: 3px solid black;
+    background-color: #f1efe9;
     border-radius: 4px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -183,18 +182,20 @@ div img {
 }
 .upgrades {
     margin: 10px auto;
-    background-color: #85BB65;
-    border: 3px solid black;
+    background-color: #053d6e;
+    color: #d7dad7;
+    border: none;
     border-radius: 4px;
     padding-top: 5px;
     padding-bottom: 5px;
     Width: 150px;
     box-sizing: border-box;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 .upgradesInvis {
     margin: 10px auto;
     background-color: #85BB65;
-    border: 3px solid black;
     border-radius: 4px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -203,12 +204,13 @@ div img {
     visibility: hidden;
 }
 .upgrades:hover {
-    background-color: #95be7b;
+    transform: translateY(-0.5px);
+    box-shadow: 0px 4px 10px -5px black;
 }
 
 footer {
-    background-color: #85BB65;
-    border-top: 3px solid black;
+    background-color: #1d1c1c;
+    box-shadow: 0px -3px 10px black;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -218,8 +220,7 @@ footer {
 }
 footer p {
     color: #1d1d1d;
-    background-color: #DDE8D5;
-    border: 3px solid black;
+    background-color: #f1efe9;
     border-radius: 8px;
     width: fit-content;
     padding: 5px 10px;
